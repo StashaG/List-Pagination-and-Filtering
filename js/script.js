@@ -35,6 +35,12 @@ FSJS project 2 - List Filter and Pagination
        "invoke" the function 
 ***/
 
+const showPage = (list, page) => {
+
+
+
+}
+
 
 
 
@@ -43,6 +49,11 @@ FSJS project 2 - List Filter and Pagination
    functionality to the pagination buttons.
 ***/
 
+const appendPageLinks = (list) => {
+
+
+   
+}
 
 
 
