@@ -17,7 +17,8 @@ FSJS project 2 - List Filter and Pagination
    scoped to that function.
 ***/
 
-
+let listItem = document.querySelectorAll('li');
+let ItemsPerPage = 10; //number of items to show on each page
 
 
 /*** 
