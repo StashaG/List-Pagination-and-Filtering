@@ -35,7 +35,11 @@ let ItemsPerPage = 10; //number of items to show on each page
        that will be passed into the parens later when you call or 
        "invoke" the function 
 ***/
+const showPage = (list, page) => {
 
+
+
+}
 
 
 
@@ -43,7 +47,10 @@ let ItemsPerPage = 10; //number of items to show on each page
    Create the `appendPageLinks function` to generate, append, and add 
    functionality to the pagination buttons.
 ***/
+const appendPageLinks = (list) => {
 
+   
+}
 
 
 
