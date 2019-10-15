@@ -36,12 +36,6 @@ let ItemsPerPage = 10; //number of items to show on each page
        "invoke" the function 
 ***/
 
-const showPage = (list, page) => {
-
-
-
-}
-
 
 
 
@@ -50,11 +44,6 @@ const showPage = (list, page) => {
    functionality to the pagination buttons.
 ***/
 
-const appendPageLinks = (list) => {
-
-
-   
-}
 
 
 
