@@ -36,10 +36,14 @@ const ItemsPerPage = 10; //number of items to show on each page
        "invoke" the function 
 ***/
 const showPage = (list, page) => {
-
-
-
-}
+   let startIndex = (page * ItemsPerPage) - ItemsPerPage;
+   let endIndex = (page * ItemsPerPage);
+   for (let i = 0; i < list.length; i += 1) {
+      if (i >= startIndex && i <= endIndex) {
+         //list[i].
+      }
+   }
+};
 
 
 
