@@ -39,7 +39,7 @@ console.log(listItem);
 const showPage = (list, page) => { //show the students on the page
    let startIndex = (page * itemsPerPage) - itemsPerPage;
    let endIndex = page * itemsPerPage;
-   for (let i = 0; i < list.length; i += 1) { //loop over the list items
+   for (let i = 0; i < list.length; i ++) { //loop over the list items
       if (i >= startIndex && i < endIndex) {
          list[i].style.display = 'block'; 
       }else{
@@ -47,18 +47,41 @@ const showPage = (list, page) => { //show the students on the page
       }
    }
 }
-showPage(itemsPerPage, 1);
+(showPage(listItem, 1));
 
 /*** 
    Create the `appendPageLinks function` to generate, append, and add 
    functionality to the pagination buttons.
 ***/
 const appendPageLinks = (list) => {
-   const numOfPages = listItems.length / itemsPerPage;
-   const paginationDiv = document.createElement('div');
-   paginationDiv.className = 'pagination';
-   paginationDiv.appendChild('page');
+   const paginationDiv = document.querySelector('.page');
+   const numOfPages = Math.ceil(listItem.length / itemsPerPage);
+   const paginationDiv = document.createElement('div');  //create a div
+   paginationDiv.className = 'pagination'; //give the div a pagination class
+   paginationDiv.appendChild('.page'); //append the paginationDiv to .page div
+   paginationDiv.appendChild('ul'); //add ul to the paginationDiv to store the paginationDiv
    
+   for (let i = 0; i < numOfPages; i ++) { //loop for pagination links
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      li.appendChild('a');
+      ul.appendChild('li');
+      a.textContent = i;
+
+      a.addEventListener('click', () => {
+
+
+         
+      })
+
+
+
+      //console.log(numOfPages);
+   }
+
+   
+    
+
 
 
    
