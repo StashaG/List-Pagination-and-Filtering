@@ -54,7 +54,6 @@ const showPage = (list, page) => { //show the students on the page
    functionality to the pagination buttons.
 ***/
 const appendPageLinks = (list) => {
-   const paginationDiv = document.querySelector('.page');
    const numOfPages = Math.ceil(listItem.length / itemsPerPage);
    const paginationDiv = document.createElement('div');  //create a div
    paginationDiv.className = 'pagination'; //give the div a pagination class
@@ -68,7 +67,8 @@ const appendPageLinks = (list) => {
       ul.appendChild('li');
       a.textContent = i;
 
-      a.addEventListener('click', () => {
+      a.addEventListener('click', (list) => {
+      appendPageLinks(list);
 
 
          
