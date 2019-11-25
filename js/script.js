@@ -69,13 +69,12 @@ const appendPageLinks = (list) => {
 
       a.addEventListener('click', () => { //add an event listener to each a tag
       showPage(listItem, i); //call the showPage function to display the page
-
-
-         
+      
+      
       });
 
 
-
+      appendPageLinks(listItem);
       //console.log(numOfPages);
    }
 
