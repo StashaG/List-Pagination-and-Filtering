@@ -63,8 +63,9 @@ const appendPageLinks = (list) => {
    for (let i = 0; i < numOfPages; i ++) { //loop for pagination links
       const li = document.createElement('li');
       const a = document.createElement('a');
-      li.appendChild('a');
-      ul.appendChild('li');
+      li.appendChild(a);
+      ul.appendChild(li);
+      a.href = '#'
       a.textContent = i;
 
       a.addEventListener('click', () => { //add an event listener to each a tag
