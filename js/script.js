@@ -66,17 +66,23 @@ const appendPageLinks = (list) => {
       li.appendChild(a);
       ul.appendChild(li);
       a.href = '#'
-      a.textContent = i;
+      a.textContent = i + 1;
 
-      a.addEventListener('click', () => { //add an event listener to each a tag
+      a.addEventListener('click', (event) => { //add an event listener to each a tag
+         let buttonLinks = document.getElementsByTagName('a'); //get button links by tagName
+         for (let i =0; i < numOfPages.length; i++) {
+            buttonLinks[i].className.remove('active');
+         }
+         let e = event.target;
+         e.className.add('active');
+         
       showPage(listItem, i); //call the showPage function to display the page
-      
-      
+            
       });
 
 
       appendPageLinks(listItem);
-      //console.log(numOfPages);
+      console.log(numOfPages);
    }
 
    
