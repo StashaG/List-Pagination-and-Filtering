@@ -67,12 +67,12 @@ const appendPageLinks = (list) => {
       ul.appendChild('li');
       a.textContent = i;
 
-      a.addEventListener('click', (list) => {
-      appendPageLinks(list);
+      a.addEventListener('click', () => { //add an event listener to each a tag
+      showPage(listItem, i); //call the showPage function to display the page
 
 
          
-      })
+      });
 
 
 
