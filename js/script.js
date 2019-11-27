@@ -95,6 +95,6 @@ const appendPageLinks = (list) => {
    
 }
 
-
+showPage(listItem, 1);
 appendPageLinks(listItem);
 
