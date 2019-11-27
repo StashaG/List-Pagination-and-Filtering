@@ -57,8 +57,10 @@ const appendPageLinks = (list) => {
    const numOfPages = Math.ceil(listItem.length / itemsPerPage);
    const paginationDiv = document.createElement('div');  //create a div
    paginationDiv.className = 'pagination'; //give the div a pagination class
-   paginationDiv.appendChild('.page'); //append the paginationDiv to .page div
-   paginationDiv.appendChild('ul'); //add ul to the paginationDiv to store the paginationDiv
+   let pageDiv = document.querySelector('div.page') //select the .page div 
+   pageDiv.appendChild(paginationDiv); //append the paginationDiv to .page div
+   let ul = document.createElement('ul'); //add a ul element
+   paginationDiv.appendChild(ul); //add ul to the paginationDiv to store the pagination links
    
    for (let i = 0; i < numOfPages; i ++) { //loop for pagination links
       const li = document.createElement('li');
@@ -70,18 +72,18 @@ const appendPageLinks = (list) => {
 
       a.addEventListener('click', (event) => { //add an event listener to each a tag
          let buttonLinks = document.getElementsByTagName('a'); //get button links by tagName
-         for (let i =0; i < numOfPages.length; i++) {
-            buttonLinks[i].className.remove('active');
+         for (let i =0; i < numOfPages; i++) {
+            buttonLinks[i].classList.remove('active');
          }
          let e = event.target;
-         e.className.add('active');
+         e.classList.add('active');
          
-      showPage(listItem, i); //call the showPage function to display the page
+      showPage(listItem, event.target.textContent); //call the showPage function to display the page
             
       });
 
 
-      appendPageLinks(listItem);
+      
       console.log(numOfPages);
    }
 
@@ -94,6 +96,5 @@ const appendPageLinks = (list) => {
 }
 
 
+appendPageLinks(listItem);
 
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
