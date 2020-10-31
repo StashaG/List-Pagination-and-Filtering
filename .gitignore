@@ -86,3 +86,9 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# History
+.history
+/.history
+.history/
+*.history
